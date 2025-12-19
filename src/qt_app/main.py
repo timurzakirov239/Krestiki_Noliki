@@ -25,9 +25,17 @@ BASE_DIR = Path(__file__).resolve().parents[2]  # project root
 MODELS_DIR = BASE_DIR / "models"
 DEFAULT_DATA_CSV = MODELS_DIR / "vivino_with_clusters.csv"
 
-# allow importing src/common.py
+# allow importing modules from src/
 sys.path.append(str(BASE_DIR / "src"))
+
 from common import make_features  # noqa: E402
+
+# try import game widget (Home tab)
+try:
+    from qt_app.ttt_widget import TicTacToeHomeWidget  # noqa: E402
+except Exception as e:
+    TicTacToeHomeWidget = None
+    _HOME_IMPORT_ERROR = e
 
 
 # --- Column names (display only) ---
@@ -140,10 +148,22 @@ class MainWindow(QMainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Ошибка", f"Не удалось загрузить модели:\n{e}")
 
-    # ---- Home (empty) ----
+    # ---- Home (game + training demo) ----
     def _build_tab_home_empty(self) -> QWidget:
-        # Intentionally empty: user will add a game later
-        return QWidget()
+        if TicTacToeHomeWidget is None:
+            w = QWidget()
+            lay = QVBoxLayout(w)
+            lay.addWidget(QLabel(
+                "Не удалось загрузить игру (TicTacToeHomeWidget).\n\n"
+                "Проверь, что файл существует:\n"
+                "src/qt_app/ttt_widget.py\n\n"
+                "И что есть __init__.py:\n"
+                "src/qt_app/__init__.py\n\n"
+                f"Текст ошибки:\n{_HOME_IMPORT_ERROR}"
+            ))
+            lay.addStretch(1)
+            return w
+        return TicTacToeHomeWidget()
 
     # ---- Data container (subtabs) ----
     def _build_tab_data_container(self) -> QWidget:
@@ -374,9 +394,6 @@ class MainWindow(QMainWindow):
         return w
 
     def _refresh_cluster_names(self):
-        """
-        Даём кластерам названия по их распределению (по средним значениям в каждом кластере).
-        """
         self.cluster_names = {}
         if self.df is None or "cluster" not in self.df.columns:
             return
@@ -457,7 +474,6 @@ class MainWindow(QMainWindow):
         self.ax.set_xlabel("Проекция 1")
         self.ax.set_ylabel("Проекция 2")
 
-        # Legend: cluster -> name -> count
         counts = pd.Series(c).value_counts().sort_index()
         handles = []
         labels = []
@@ -467,7 +483,10 @@ class MainWindow(QMainWindow):
         for cid, cnt in counts.items():
             color = colormap(norm(cid))
             name = self.cluster_names.get(int(cid), f"Кластер {int(cid)}")
-            handles.append(Line2D([0], [0], marker="o", linestyle="None",markerfacecolor=color, markeredgecolor=color, markersize=7))
+            handles.append(Line2D(
+                [0], [0], marker="o", linestyle="None",
+                markerfacecolor=color, markeredgecolor=color, markersize=7
+            ))
             labels.append(f"{int(cid)}: {name} ({int(cnt)})")
 
         self.ax.legend(handles, labels, loc="upper right", fontsize=8, frameon=True)
