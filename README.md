@@ -10,8 +10,27 @@
 - визуализировать кластеры на 2D scatter-plot;
 - играть в крестики-нолики против ИИ и наблюдать процесс обучения «в замедленном режиме».
 
-## Структура проекта
+## Как запустить
 
+### 1. Запуск GUI-приложения
+```
+cd src
+python -m qt_app.main
+```
+### 2. Обучение моделей для вин
+```
+cd src
+python train_regressor.py
+python train_classifier.py
+python train_clusterer.py
+```
+### 3. Обучение моделей крестиков-ноликов
+```
+cd src
+python -m ttt.train_all
+```
+## Структура проекта
+```text
 ml_powerplants/
 ├── data/                           # Исходные данные
 │   ├── Red.csv                     
@@ -55,24 +74,33 @@ ml_powerplants/
 │       ├── training.py              # Обучение MLP (junior / mid / senior)
 │       └── train_all.py             # Скрипт для обучения всех уровней
 ```
-
----
-
 ## Технологии и фреймворки
 
-| Категория | Технология | Назначение |
-|---|---|---|
-| **Язык** | Python 3.10+ | Весь проект |
-| **ML / Data Science** | scikit-learn | Регрессия (Ridge), классификация (LogisticRegression), кластеризация (KMeans), SVD, MLP (MLPClassifier), пайплайны и препроцессинг |
-| | pandas | Загрузка, очистка и обработка CSV-данных |
-| | NumPy | Числовые вычисления, log-трансформации |
-| | joblib | Сериализация обученных моделей (.joblib) |
-| **GUI** | PySide6 (Qt 6) | Десктопное приложение: окна, вкладки, таблицы, кнопки |
-| **Визуализация** | matplotlib | Scatter-plot кластеров (встроен в Qt через `FigureCanvasQTAgg`) |
-| **Прочие** | JSON | Хранение метаданных моделей и порогов |
-| | functools.lru_cache | Мемоизация minimax для крестиков-ноликов |
+Язык программирования
+Python 3.10+ — основной язык проекта
 
----
+ML / Data Science
+- scikit-learn — модели машинного обучения:
+- Регрессия (Ridge)
+- Классификация (LogisticRegression)
+- Кластеризация (KMeans)
+- Снижение размерности (TruncatedSVD)
+- Нейросеть (MLPClassifier)
+- Пайплайны и препроцессинг (Pipeline, ColumnTransformer, OneHotEncoder, StandardScaler)
+
+pandas — загрузка, очистка и обработка CSV-данных
+
+NumPy — числовые вычисления, логарифмические трансформации
+
+GUI
+PySide6 (Qt 6) — десктопное приложение: окна, вкладки, таблицы, кнопки
+
+Визуализация
+matplotlib — scatter-plot кластеров, встроен в Qt через FigureCanvasQTAgg
+
+Прочие
+JSON — хранение метаданных моделей и порогов
+functools.lru_cache — мемоизация minimax для крестиков-ноликов
 
 ## Подробное описание компонентов
 
@@ -162,35 +190,5 @@ ml_powerplants/
   - Модель делает свой ход (синяя/красная подсветка).
   - После каждого шага — `partial_fit` на одном примере.
   - Лог с историей обучения.
-
----
-
-## Как запустить
-
-### 1. Запуск GUI-приложения
-cd src
-python -m qt_app.main
-
-### 2. Обучение моделей для вин
-cd src
-python train_regressor.py
-python train_classifier.py
-python train_clusterer.py
-
-### 3. Обучение моделей крестиков-ноликов
-cd src
-python -m ttt.train_all
-
-
-
-
-
-## Зависимости
-
-- `Python >= 3.10`
-- `pandas`
-- `numpy`
-- `scikit-learn`
-- `joblib`
 - `PySide6`
 - `matplotlib`
