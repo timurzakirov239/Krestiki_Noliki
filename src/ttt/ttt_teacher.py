@@ -1,9 +1,7 @@
 from __future__ import annotations
-
 from functools import lru_cache
 from typing import List, Optional, Tuple
 import random
-
 from .ttt_core import X, O, check_winner, available_moves, is_terminal, make_move
 
 
@@ -18,11 +16,6 @@ def _terminal_score(board: Tuple[int, ...]) -> int:
 
 @lru_cache(maxsize=None)
 def _minimax_full(board: Tuple[int, ...], player: int) -> int:
-    """
-    IDEAL teacher:
-    full search until terminal.
-    Score is from X perspective: +1 (X win), -1 (O win), 0 draw.
-    """
     if is_terminal(board):
         return _terminal_score(board)
 
@@ -87,12 +80,6 @@ def best_moves(board: Tuple[int, ...], player: int, depth: Optional[int]) -> Lis
 
 
 def teacher_move(board: Tuple[int, ...], player: int, level: str, rng: random.Random) -> int:
-    """
-    level:
-      senior -> full minimax (ideal)
-      mid    -> depth=3 + small noise
-      junior -> depth=1 + bigger noise
-    """
     if is_terminal(board):
         raise ValueError("Terminal position")
 

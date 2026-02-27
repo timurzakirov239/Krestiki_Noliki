@@ -1,0 +1,26 @@
+{
+  "task": "price_classification",
+  "target": "PriceClass (derived from Price quantiles on train)",
+  "thresholds": {
+    "q33": 11.7,
+    "q66": 23.75,
+    "classes": [
+      "дёшево",
+      "средне",
+      "дорого"
+    ]
+  },
+  "numeric_features": [
+    "Rating",
+    "NumberOfRatings",
+    "Year_num",
+    "Year_is_nv"
+  ],
+  "categorical_features": [
+    "Country",
+    "Region",
+    "Winery",
+    "WineType"
+  ],
+  "rows": 13834
+}

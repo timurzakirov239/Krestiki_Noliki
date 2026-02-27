@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a182db4-ee31-4941-892e-50e56d375847" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ml_powerplants.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/inspect_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/qt_app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/qt_app/main_ttt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/qt_app/ttt_widget.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/train_classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/train_clusterer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/train_regressor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/generate_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/train_all.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/ttt_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/ttt_core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ttt/ttt_teacher.py" afterDir="false" />
+    <list default="true" id="8a182db4-ee31-4941-892e-50e56d375847" name="Changes" comment="готово">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ttt/ttt_teacher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ttt/ttt_teacher.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,32 +23,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="372kDNcdbzTMHXyZm3tP4NNCNuE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.inspect_data.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.train_all.executor": "Run",
-    "Python.train_classifier.executor": "Run",
-    "Python.train_clusterer.executor": "Run",
-    "Python.train_regressor.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/pythonProjects/ml_powerplants"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.inspect_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_all.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_classifier.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_clusterer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_regressor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/pythonProjects/ml_powerplants&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.train_all">
+}</component>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ml_powerplants" />
       <option name="ENV_FILES" value="" />
@@ -81,6 +67,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/qt_app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -103,6 +90,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ttt/train_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -125,6 +113,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train_classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -147,6 +136,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train_clusterer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -169,6 +159,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train_regressor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -180,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_all" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.train_all" />
         <item itemvalue="Python.train_clusterer" />
         <item itemvalue="Python.train_classifier" />
         <item itemvalue="Python.train_regressor" />
@@ -191,7 +182,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-4762d8aabb82-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.173" />
       </set>
     </attachedChunks>
   </component>
@@ -204,6 +195,51 @@
       <option name="presentableId" value="Default" />
       <updated>1766108434378</updated>
     </task>
+    <task id="LOCAL-00001" summary="комит номер 2">
+      <option name="closed" value="true" />
+      <created>1766128265890</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766128265890</updated>
+    </task>
+    <task id="LOCAL-00002" summary="готово">
+      <option name="closed" value="true" />
+      <created>1766129355094</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1766129355094</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="комит номер 2" />
+    <MESSAGE value="готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово" />
   </component>
 </project>

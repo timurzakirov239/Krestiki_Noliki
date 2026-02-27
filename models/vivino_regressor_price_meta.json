@@ -1,0 +1,23 @@
+{
+  "task": "price_regression",
+  "target": "Price",
+  "log_target": true,
+  "numeric_features": [
+    "Rating",
+    "NumberOfRatings",
+    "Year_num",
+    "Year_is_nv"
+  ],
+  "categorical_features": [
+    "Country",
+    "Region",
+    "Winery",
+    "WineType"
+  ],
+  "metrics": {
+    "mae_eur": 12.086577892015548,
+    "rmse_eur": 73.63881838391276,
+    "r2": 0.3423530870512802
+  },
+  "rows": 13834
+}
